@@ -9,7 +9,8 @@ Gabriele Ansaldo
 
 The repository contains two main folders. One contains the files created for **designing** the simulation environment and the other contains the files related to **transfering** a learned policy onto a real [Sawyer Robot](https://www.rethinkrobotics.com/sawyer) with the help of a [ZED 2](https://www.stereolabs.com/zed-2/) camera.\
 
-![SMPL-X human meshes 1](images/Sim-VS-Real.pdf "SMPL-X human meshes 1")
+![Real Environment](images/real-env.jpg "Real Environment")
+![Designed Environment](images/sim-env.jpg "Designed Environment")
 
 
 (add screenshot of environment and a video of it in simulation and a video of it in real life
