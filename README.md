@@ -6,40 +6,66 @@ This code accompanies the submission:\
 "A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"\
 Gabriele Ansaldo
 
-The repository is composed of two main folders. One folder contains the files created for **designing** the simulation environment, and the other contains files related to **transferring** a learned policy onto a real [Sawyer Robot](https://www.rethinkrobotics.com/sawyer) with the help of a [ZED 2](https://www.stereolabs.com/zed-2/) stereo camera.
 
+## Reaching Task - Overview
+The Reaching Task consists of two sub-tasks, a **deterministic** and subsequently a **stochastic** one. The first sub-task is called deterministic since the robot’s joint angles and movements are predetermined and hardcoded. The second sub-task is referred to as stochastic since the robot’s joint positions are not predetermined but are the result of a Reinforcement Learning policy learned in simulation using Assistive Gym. For the Reaching Task, a blue and a red marker are placed on a shelf out of reach from a human operator. The position of the markers is constant for all simulations. Firstly, in the deterministic sub-task, the human points at the desired marker, and through computer vision (ZED camera), the robot understands which of the markers was chosen. The chosen marker is then grabbed by the robot using predetermined joint positions. Secondly, the stochastic sub-task consists of the robot passing the marker to the human’s right hand. This sub-task is solely based on the environment designed in Assistive Gym which allows the robot to learn to reach a human’s hand.  
+  
+An example of the designed task can be seen in the following video:  
+  
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
+
+***
+## Repository Overview
+The repository is composed of two main folders. One folder contains the files created for **designing** the simulation environment, and the other contains files related to **transferring** a learned policy onto a real [Sawyer Robot](https://www.rethinkrobotics.com/sawyer) with the help of a [ZED 2](https://www.stereolabs.com/zed-2/) stereo camera.  
+  
+Here is a side by side picture of the real environment and the designed environment.  
 <img src="https://github.com/gansaldo/reaching-task/blob/main/images/real-env.jpg" width="300"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-env.jpg" width="300">
 
 #### Trained model in simulation
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="400">
+The designed environment was trained in simulation for approximately 10,000,000 timesteps. The following video shows how the trained model performs.  
+  
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
 
 
 #### Trained model on real Sawyer robot 
-![Trained model on real Sawyer robot](images/real-trained-model.gif "Trained model on real Sawyer robot")
+The policy learned in simulation was then transfered to the real environment. The following video shows how the trained model performs in real life.  
+![Trained model on real Sawyer robot](images/real-trained-model.gif "Trained model on real Sawyer robot") (add video of robot just moving to predetermined point)
 
-### Desing of Environment (Folder 1)
-For the design of the environment [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) was utilized. For details on how to install Assistive Gym please check out the [installation guide for Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym/wiki/1.-Install).\
-Once Assistive Gym is installed replace/add the following files and folders with the ones present in Folder 1:\
+# Installation Guide
+## Desing of Environment (Folder 1)
+For the design of the environment [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) was utilized. For details on how to install Assistive Gym please check out the [installation guide for Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym/wiki/1.-Install).  
+Once Assistive Gym is installed replace/add the following files and folders with the ones present in Folder 1 (Designed Environment):  
 
-Replace the following files:
+Replace/add the following files:
 File Name     | Location
 ------------- | -------------
-config.ini    | /assistive-gym/assistive_gym/config.ini
-__init__.py   | /assistive-gym/assistive_gym/envs/__ init __.py
-reaching.py   | /assistive-gym/assistive_gym/envs/reaching.py
-furniture.py  | /assistive-gym/assistive_gym/envs/agents/furniture.py
-sawyer.py     | /assistive-gym/assistive_gym/envs/agents/sawyer.py
-tool.py       | /assistive-gym/assistive_gym/envs/agents/tool.py
+`config.ini`    | `/assistive-gym/assistive_gym/config.ini`
+`__init__.py`   | `/assistive-gym/assistive_gym/envs/__init__.py`
+`reaching.py`   | `/assistive-gym/assistive_gym/envs/`
+`furniture.py`  | `/assistive-gym/assistive_gym/envs/agents/furniture.py`
+`sawyer.py`     | `/assistive-gym/assistive_gym/envs/agents/sawyer.py`
+`tool.py`       | `/assistive-gym/assistive_gym/envs/agents/tool.py`
 
 Add the following folders:
-Folder Name   | Location
-------------- | -------------
-ZED_camera    | /assistive-gym/assistive_gym/envs/assets/
-lab_table     | /assistive-gym/assistive_gym/envs/assets/
-lab_shelf     | /assistive-gym/assistive_gym/envs/assets/
-lab_marker    | /assistive-gym/assistive_gym/envs/assets/
+Folder Name             | Location
+-------------           | -------------
+`ZED_camera`            | `/assistive-gym/assistive_gym/envs/assets/`
+`lab_table`             | `/assistive-gym/assistive_gym/envs/assets/`
+`lab_shelf`             | `/assistive-gym/assistive_gym/envs/assets/`
+`lab_marker`            | `/assistive-gym/assistive_gym/envs/assets/`
+`ReachingSawyer-v1`     | `/assistive-gym/trained_models/ppo/`
 
-(add trained model)
-It will now be possible
-### Implementation of Environment (Folder 2)
+
+It will now be possible to render the designed environment in simuation. The below command will render a Sawyer robot taking random actions within the Reaching Task  with a static person.  
+```bash 
+python3 -m assistive_gym --env "FeedingJaco-v1"
+```  
+
+In order to render a single rollout of the trained policy use the following command:
+```bash 
+python3 -m assistive_gym.learn --env "ReachingSawyer-v1" --algo ppo --render --seed 0 --load-policy-path ./trained_models/ --render-episodes 10
+```  
+
+
+## Implementation of Environment (Folder 2)
 Implementing uses a ZED camera and Sawyer Robot the code is ... but it is crucial to calibrate the coordinate systems then use the code
