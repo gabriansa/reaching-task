@@ -34,26 +34,28 @@ The policy learned in simulation was then transfered to the real environment. Th
 # Installation Guide
 ## Desing of Environment (Folder 1)
 For the design of the environment [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) was utilized. For details on how to install Assistive Gym please check out the [installation guide for Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym/wiki/1.-Install).  
-Once Assistive Gym is installed replace/add the following files and folders with the ones present in Folder 1 (Designed Environment):  
+Once Assistive Gym is installed replace/add the following files and folders with the ones present in Folder 1 ([Designed Environment](https://github.com/gansaldo/reaching-task/tree/main/Designed%20Environment)):  
 
-Replace/add the following files:
-File Name     | Location
-------------- | -------------
-`config.ini`    | `/assistive-gym/assistive_gym/config.ini`
-`__init__.py`   | `/assistive-gym/assistive_gym/envs/__init__.py`
-`reaching.py`   | `/assistive-gym/assistive_gym/envs/`
-`furniture.py`  | `/assistive-gym/assistive_gym/envs/agents/furniture.py`
-`sawyer.py`     | `/assistive-gym/assistive_gym/envs/agents/sawyer.py`
-`tool.py`       | `/assistive-gym/assistive_gym/envs/agents/tool.py`
+Replace/add the following files at given location:
+File Name           | Location                                      | Actions
+-------------       | -------------                                 | -------------
+`config.ini`        | `/assistive-gym/assistive_gym/`               | Replace
+`__init__.py`       | `/assistive-gym/assistive_gym/`               | Replace
+`__init__ 2.py`     | `/assistive-gym/assistive_gym/envs/`          | Rename to `__init__.py` and Replace
+`reaching.py`       | `/assistive-gym/assistive_gym/envs/`          | Add
+`reaching_envs.py`  | `/assistive-gym/assistive_gym/envs/`          | Add
+`furniture.py`      | `/assistive-gym/assistive_gym/envs/agents/`   | Replace
+`sawyer.py`         | `/assistive-gym/assistive_gym/envs/agents/`   | Replace
+`tool.py`           | `/assistive-gym/assistive_gym/envs/agents/`   | Replace
 
-Add the following folders:
-Folder Name             | Location
--------------           | -------------
-`ZED_camera`            | `/assistive-gym/assistive_gym/envs/assets/`
-`lab_table`             | `/assistive-gym/assistive_gym/envs/assets/`
-`lab_shelf`             | `/assistive-gym/assistive_gym/envs/assets/`
-`lab_marker`            | `/assistive-gym/assistive_gym/envs/assets/`
-`ReachingSawyer-v1`     | `/assistive-gym/trained_models/ppo/`
+Add the following folders at given location:
+Folder Name             | Location                                      | Actions
+-------------           | -------------                                 | -------------
+`ZED_camera`            | `/assistive-gym/assistive_gym/envs/assets/`   | Add
+`lab_table`             | `/assistive-gym/assistive_gym/envs/assets/`   | Add
+`lab_shelf`             | `/assistive-gym/assistive_gym/envs/assets/`   | Add
+`lab_marker`            | `/assistive-gym/assistive_gym/envs/assets/`   | Add
+`ReachingSawyer-v1`     | `/assistive-gym/trained_models/ppo/`          | Add
 
 
 It will now be possible to render the designed environment in simuation. The below command will render a Sawyer robot taking random actions within the Reaching Task  with a static person.  
@@ -68,4 +70,10 @@ python3 -m assistive_gym.learn --env "ReachingSawyer-v1" --algo ppo --render --s
 
 
 ## Implementation of Environment (Folder 2)
+The second folder ([Simulation to Real](https://github.com/gansaldo/reaching-task/tree/main/Simulation%20to%20Real)) contains two main codes:
+- `ReachingTask.py` is the main code used to run the full task on the Sawyer and ZED camera
+- `coordinate_systems_calibration.py` is utilized to calibrate the ZED coordinate system with the Sawyer reference frame
+
+### `ReachingTask.py`
+
 Implementing uses a ZED camera and Sawyer Robot the code is ... but it is crucial to calibrate the coordinate systems then use the code
