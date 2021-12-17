@@ -6,14 +6,16 @@ This code accompanies the submission:\
 "A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"\
 Gabriele Ansaldo
 
+The repository is composed of two main folders. One folder contains the files created for **designing** the simulation environment, and the other contains files related to **transferring** a learned policy onto a real [Sawyer Robot](https://www.rethinkrobotics.com/sawyer) with the help of a [ZED 2](https://www.stereolabs.com/zed-2/) stereo camera.
 
-The repository contains two main folders. One contains the files created for **designing** the simulation environment and the other contains the files related to **transfering** a learned policy onto a real [Sawyer Robot](https://www.rethinkrobotics.com/sawyer) with the help of a [ZED 2](https://www.stereolabs.com/zed-2/) camera.\
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/real-env.jpg" width="300"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-env.jpg" width="300">
 
-![Real Environment](images/real-env.jpg "Real Environment")
-![Designed Environment](images/sim-env.jpg "Designed Environment")
+#### Trained model in simulation
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="400">
 
 
-(add screenshot of environment and a video of it in simulation and a video of it in real life
+#### Trained model on real Sawyer robot 
+![Trained model on real Sawyer robot](images/real-trained-model.gif "Trained model on real Sawyer robot")
 
 ### Desing of Environment (Folder 1)
 For the design of the environment [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) was utilized. For details on how to install Assistive Gym please check out the [installation guide for Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym/wiki/1.-Install).\
