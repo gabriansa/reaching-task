@@ -73,12 +73,12 @@ python3 -m assistive_gym.learn --env "ReachingSawyer-v1" --algo ppo --render --s
 Refer to the [ZED 2 installation guide](https://www.stereolabs.com/docs/installation/linux/) and [Sawyer SDK installation guide](https://sdk.rethinkrobotics.com/intera/Main_Page) to set up both the camera and robot.  
 The second folder ([Simulation to Real](https://github.com/gansaldo/reaching-task/tree/main/Simulation%20to%20Real)) contains two main codes:
 - `ReachingTask.py` is the main code used to run the full task on the Sawyer and ZED camera
-- `coordinate_systems_calibration.py` is utilized to calibrate the ZED coordinate system with the Sawyer reference frame  
+- `coordinate_system_calibration.py` is utilized to calibrate the ZED coordinate system with the Sawyer reference frame  
 ***
 ### `ReachingTask.py`
 This code contains both the **deterministic** and **stochastic** sub-tasks. It is necessary to use both the Sawyer robot and ZED 2 camera in order to run this code. However, if different hardware is used, this code may be used as a template for further modification.  
   
-### `coordinate_systems_calibration.py`
+### `coordinate_system_calibration.py`
 A crucial step in assuring proper functioning of the `ReachingTask.py` code is to perform an accurate calibration of the ZED and Sawyer coordinate systems. This code is used to perform calibration. The following video shows how calibration is performed: (screenrecord calibration with two videos: one is screen one is robot)
   
 <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
