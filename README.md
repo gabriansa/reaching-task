@@ -2,8 +2,8 @@
 
 This repository is based on [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) which is a physics-based simulation framework for physical human-robot interaction and robotic assistance. 
 
-This code accompanies the submission:\
-"A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"\
+This code accompanies the submission:  
+["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"]()  
 Gabriele Ansaldo
 
 
@@ -19,6 +19,7 @@ An example of the designed task can be seen in the following video:
 The repository is composed of two main folders. One folder contains the files created for **designing** the simulation environment, and the other contains files related to **transferring** a learned policy onto a real [Sawyer Robot](https://www.rethinkrobotics.com/sawyer) with the help of a [ZED 2](https://www.stereolabs.com/zed-2/) stereo camera.  
   
 Here is a side by side picture of the real environment and the designed environment.  
+  
 <img src="https://github.com/gansaldo/reaching-task/blob/main/images/real-env.jpg" width="300"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-env.jpg" width="300">
 
 #### Trained model in simulation
@@ -60,7 +61,7 @@ Folder Name             | Location                                      | Action
 
 It will now be possible to render the designed environment in simuation. The below command will render a Sawyer robot taking random actions within the Reaching Task  with a static person.  
 ```bash 
-python3 -m assistive_gym --env "FeedingJaco-v1"
+python3 -m assistive_gym --env "ReachingSawyer-v1"
 ```  
 
 In order to render a single rollout of the trained policy use the following command:
