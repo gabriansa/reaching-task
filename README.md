@@ -10,7 +10,7 @@ Gabriele Ansaldo
 ## Reaching Task - Overview
 The Reaching Task consists of two sub-tasks, a **deterministic** and subsequently a **stochastic** one. The first sub-task is called deterministic since the robot’s joint angles and movements are predetermined and hardcoded. The second sub-task is referred to as stochastic since the robot’s joint positions are not predetermined but are the result of a Reinforcement Learning policy learned in simulation using Assistive Gym. For the Reaching Task, a blue and a red marker are placed on a shelf out of reach from a human operator. The position of the markers is constant for all simulations. Firstly, in the deterministic sub-task, the human points at the desired marker, and through computer vision (ZED camera), the robot understands which of the markers was chosen. The chosen marker is then grabbed by the robot using predetermined joint positions. Secondly, the stochastic sub-task consists of the robot passing the marker to the human’s right hand. This sub-task is solely based on the environment designed in Assistive Gym which allows the robot to learn to reach a human’s hand.  
   
-An example of the designed task can be seen in the following video:  
+An example of the designed task can be seen in the following video: (add video of also ZED)  
   
 <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
 
