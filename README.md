@@ -75,6 +75,7 @@ Refer to the [ZED 2 installation guide](https://www.stereolabs.com/docs/installa
 The second folder ([Simulation to Real](https://github.com/gansaldo/reaching-task/tree/main/Simulation%20to%20Real)) contains two main codes:
 - `ReachingTask.py` is the main code used to run the full task on the Sawyer and ZED camera
 - `coordinate_system_calibration.py` is utilized to calibrate the ZED coordinate system with the Sawyer reference frame  
+Move the entire Folder 2 to `/assistive-gym/`.
 ***
 ### `ReachingTask.py`
 This code contains both the **deterministic** and **stochastic** sub-tasks. It is necessary to use both the Sawyer robot and ZED 2 camera in order to run this code. However, if different hardware is used, this code may be used as a template for further modification.  
