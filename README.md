@@ -3,7 +3,7 @@
 This repository is based on [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) which is a physics-based simulation framework for physical human-robot interaction and robotic assistance. 
 
 This code accompanies the submission:  
-["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"]()  
+["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"](https://github.com/gansaldo/reaching-task/tree/main/Designed%20Environment)  
 Gabriele Ansaldo
 
 
@@ -88,6 +88,6 @@ Move the entire Folder 2 to `/assistive-gym/`.
 This code contains both the **deterministic** and **stochastic** sub-tasks. It is necessary to use both the Sawyer robot and ZED 2 camera in order to run this code. However, if different hardware is used, this code may be used as a template for further modification.  
   
 ### `coordinate_system_calibration.py`
-A crucial step in assuring proper functioning of the `ReachingTask.py` code is to perform an accurate calibration of the ZED and Sawyer coordinate systems. This code is used to perform calibration. The following video shows how calibration is performed: (screenrecord calibration with two videos: one is screen one is robot)
+A crucial step in assuring proper functioning of the `ReachingTask.py` code is to perform an accurate calibration of the ZED and Sawyer coordinate systems. This code is used to perform calibration. The following video shows how calibration is performed:
   
 <img src="https://github.com/gansaldo/reaching-task/blob/main/images/Calibration-Overview.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/Calibration-Overview-ZED.gif" width="450">
