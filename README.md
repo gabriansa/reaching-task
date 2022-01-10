@@ -13,12 +13,12 @@ The Reaching Task consists of two sub-tasks, a **deterministic** and subsequentl
 An example of the designed task can be seen in the following videos:  
 
 Picking the **RED** marker:  
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview-ZED.gif" width="450"><br/>
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview-ZED.gif" width="410"><br/>
 <br/>
 <br/>
 <br/>
 Picking the **BLUE** marker:  
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview2.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview2-ZED.gif" width="450">
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview2.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview2-ZED.gif" width="410">
 
 ***
 ## Repository Overview
