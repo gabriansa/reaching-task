@@ -83,4 +83,4 @@ This code contains both the **deterministic** and **stochastic** sub-tasks. It i
 ### `coordinate_system_calibration.py`
 A crucial step in assuring proper functioning of the `ReachingTask.py` code is to perform an accurate calibration of the ZED and Sawyer coordinate systems. This code is used to perform calibration. The following video shows how calibration is performed: (screenrecord calibration with two videos: one is screen one is robot)
   
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/Calibration-Overview.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/Calibration-Overview-ZED.gif" width="450">
