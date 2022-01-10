@@ -3,7 +3,7 @@
 This repository is based on [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) which is a physics-based simulation framework for physical human-robot interaction and robotic assistance. 
 
 This code accompanies the submission:  
-["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"](https://github.com/gansaldo/reaching-task/tree/main/Designed%20Environment)  
+["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"](https://github.com/gansaldo/reaching-task/blob/main/A%20Multi-Agent%20Simulation%20Environment%20for%20Human-Robot%20Collaboration%20in%20an%20Industrial%20Setting.pdf)  
 Gabriele Ansaldo
 
 
