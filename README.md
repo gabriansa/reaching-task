@@ -36,7 +36,8 @@ The designed environment was trained in simulation for approximately 10,000,000 
 
 #### Trained model on real Sawyer robot 
 The policy learned in simulation was then transfered to the real environment. The following video shows how the trained model performs in real life.  
-![Trained model on real Sawyer robot](images/real-trained-model.gif "Trained model on real Sawyer robot") (add video of robot just moving to predetermined point)
+
+<img src="https://github.com/gansaldo/reaching-task/blob/main/images/real-trained-model.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="350">
 
 # Installation Guide
 ## Desing of Environment (Folder 1)
