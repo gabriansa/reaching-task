@@ -3,7 +3,7 @@
 This repository is based on [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) which is a physics-based simulation framework for physical human-robot interaction and robotic assistance. 
 
 This code accompanies the submission:  
-["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"](https://github.com/gansaldo/reaching-task/blob/main/A%20Multi-Agent%20Simulation%20Environment%20for%20Human-Robot%20Collaboration%20in%20an%20Industrial%20Setting.pdf)  
+["A Multi-Agent Simulation Environment for Human-Robot Collaboration in an Industrial Setting"](https://github.com/gabriansa/reaching-task/blob/main/A%20Multi-Agent%20Simulation%20Environment%20for%20Human-Robot%20Collaboration%20in%20an%20Industrial%20Setting.pdf)  
 Gabriele Ansaldo
 
 
@@ -13,12 +13,12 @@ The Reaching Task consists of two sub-tasks, a **deterministic** and subsequentl
 An example of the designed task can be seen in the following videos:  
 
 Picking the **RED** marker:  
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview-ZED.gif" width="410"><br/>
+<img src="https://github.com/gabriansa/reaching-task/blob/main/images/RT-Overview.gif" width="450"> <img src="https://github.com/gabriansa/reaching-task/blob/main/images/RT-Overview-ZED.gif" width="410"><br/>
 <br/>
 <br/>
 <br/>
 Picking the **BLUE** marker:  
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview2.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/RT-Overview2-ZED.gif" width="410">
+<img src="https://github.com/gabriansa/reaching-task/blob/main/images/RT-Overview2.gif" width="450"> <img src="https://github.com/gabriansa/reaching-task/blob/main/images/RT-Overview2-ZED.gif" width="410">
 
 ***
 ## Repository Overview
@@ -26,23 +26,23 @@ The repository is composed of two main folders. One folder contains the files cr
   
 Here is a side by side picture of the real environment and the designed environment.  
   
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/real-env.jpg" width="300"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-env.jpg" width="300">
+<img src="https://github.com/gabriansa/reaching-task/blob/main/images/real-env.jpg" width="300"> <img src="https://github.com/gabriansa/reaching-task/blob/main/images/sim-env.jpg" width="300">
 
 #### Trained model in simulation
 The designed environment was trained in simulation for approximately 10,000,000 timesteps. The following video shows how the trained model performs.  
   
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
+<img src="https://github.com/gabriansa/reaching-task/blob/main/images/sim-trained-model.gif" width="600">
 
 
 #### Trained model on real Sawyer robot 
 The policy learned in simulation was then transfered to the real environment. The following video shows how the trained model performs in real life.  
 
-<img src="https://github.com/gansaldo/reaching-task/blob/main/images/real-trained-model.gif" width="450"> <img src="https://github.com/gansaldo/reaching-task/blob/main/images/sim-trained-model.gif" width="350">
+<img src="https://github.com/gabriansa/reaching-task/blob/main/images/real-trained-model.gif" width="450"> <img src="https://github.com/gabriansa/reaching-task/blob/main/images/sim-trained-model.gif" width="350">
 
 # Installation Guide
 ## Desing of Environment (Folder 1)
 For the design of the environment [Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym) was utilized. For details on how to install Assistive Gym please check out the [installation guide for Assistive Gym](https://github.com/Healthcare-Robotics/assistive-gym/wiki/1.-Install).  
-Once Assistive Gym is installed replace/add the following files and folders with the ones present in Folder 1 ([Designed Environment](https://github.com/gansaldo/reaching-task/tree/main/Designed%20Environment)):  
+Once Assistive Gym is installed replace/add the following files and folders with the ones present in Folder 1 ([Designed Environment](https://github.com/gabriansa/reaching-task/tree/main/Designed%20Environment)):  
 
 Replace/add the following files at given location:
 File Name           | Location                                      | Actions
